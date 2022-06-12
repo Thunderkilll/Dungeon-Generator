@@ -179,6 +179,7 @@ public class PlayerSurvival : MonoBehaviour
      
     }
 
+    #region getters
     public float GetHealth()
     {
         return health;
@@ -188,8 +189,18 @@ public class PlayerSurvival : MonoBehaviour
         return maxHealth;
     }
 
+    #endregion
+
+
+    #region setters
     public void SetInvincibilityCounter(float value)
     {
         invincCounter = value;
     }
+    public void SetHealth(float value)
+    {
+        health  = value;
+    }
+    #endregion
+
 }
