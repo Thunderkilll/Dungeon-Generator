@@ -50,6 +50,7 @@ public class PlayerAttack : MonoBehaviour
                 {
                     enemiesToDamage[i].GetComponent<Enemy>().DamageEnemy(weaponDamage);
                 }
+                
  
             }
 

@@ -9,23 +9,16 @@ public class HealingPotion : MonoBehaviour
     [SerializeField]
     float healAmount = 1f;
 
+    public float waitToBeCollected = .5f;
 
+    [Header("Item properties")] 
+    public Item item;
     #endregion
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+   
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag =="Player")
+        if (other.tag =="Player" && waitToBeCollected <= 0)
         {
             float maxHealth  = PlayerSurvival.instance.GetMaxHealth();
             float currHealth = PlayerSurvival.instance.GetHealth();
@@ -50,6 +43,15 @@ public class HealingPotion : MonoBehaviour
                 Debug.Log("Health is <color=red> 100% </color>");
             }
             
+        }
+    }
+
+
+    void Update()
+    {
+        if (waitToBeCollected > 0)
+        {
+            waitToBeCollected -= Time.deltaTime;
         }
     }
 }

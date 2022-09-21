@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
     Vector2 targetPosition;
     Transform GFX;
     Vector2 hitsize;
+    [SerializeField]
     float FlipX;
     float FlipY;
     float horizontal;

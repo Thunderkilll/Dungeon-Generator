@@ -30,7 +30,7 @@ public class EnemyBullet : MonoBehaviour
             //do effect and damage here
             PlayerSurvival.instance.TakeDamage(damageAmount);
         }
-        if (other.gameObject.layer == 8)
+        if (other.gameObject.layer == 6)
         {
             Debug.Log("wall e");
             Destroy(gameObject);

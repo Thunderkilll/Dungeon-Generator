@@ -24,7 +24,7 @@ public class PlayerBullet : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
        //hitting a wall
-        if (other.gameObject.layer == 8)
+        if (other.gameObject.layer == 6)
         {
             Instantiate(bulletEffect, transform.position, transform.rotation);
            // Debug.Log("you hit wall : <color=red>"+other.name+"</color>");
