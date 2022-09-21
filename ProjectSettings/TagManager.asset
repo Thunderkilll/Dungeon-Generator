@@ -4,6 +4,9 @@
 TagManager:
   serializedVersion: 2
   tags:
+  - Bullet
+  - OnScreenBounds
+  - DestroyWithLevelChange
   - Enemy
   - Wall
   layers:
@@ -13,13 +16,13 @@ TagManager:
   - 
   - Water
   - UI
-  - Player
-  - Enemy
   - Wall
-  - Door
-  - Floor
-  - EnemyBullets
+  - Enemy
+  - Player
   - PlayerBullets
+  - EnemyBullets
+  - Floor
+  - 
   - 
   - 
   - 
@@ -40,21 +43,27 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Floor
-    uniqueID: 2628254747
-    locked: 0
-  - name: Objects
-    uniqueID: 1317974247
-    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Characters
-    uniqueID: 3178006233
+  - name: Floor
+    uniqueID: 3500181043
     locked: 0
   - name: Wall
-    uniqueID: 4267501585
+    uniqueID: 820005617
     locked: 0
-  - name: bullets
-    uniqueID: 1266879517
+  - name: Traps
+    uniqueID: 2488198409
+    locked: 0
+  - name: pickable
+    uniqueID: 3903845319
+    locked: 0
+  - name: Player
+    uniqueID: 739918523
+    locked: 0
+  - name: Enemy
+    uniqueID: 2325385823
+    locked: 0
+  - name: bullet
+    uniqueID: 2506568375
     locked: 0
