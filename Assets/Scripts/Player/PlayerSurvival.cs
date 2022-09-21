@@ -33,7 +33,7 @@ public class PlayerSurvival : MonoBehaviour
     [Header("Player Damaged status")]
     public float damageInvincLength = 1f;
     private float invincCounter;
-
+    bool isDead = false;
 
     public GameObject[] deathSplatter;
     #endregion
@@ -167,14 +167,16 @@ public class PlayerSurvival : MonoBehaviour
 
     public void CheckPlayerHealth()
     {
-  
-            if (health <= 0)
-            { 
+            
+            if (health <= 0 && !isDead)
+            {
+                isDead = true;
             //player dies
+                AudioManager.instance.PlayGameOverMusic();
                 PlayerController.instance.gameObject.SetActive(false);
                 UIController.instance.deathUI.SetActive(true);
-                AudioManager.instance.PlayGameOverMusic();
-
+                
+               
             } 
  
      

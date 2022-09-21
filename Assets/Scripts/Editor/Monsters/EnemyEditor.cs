@@ -12,6 +12,9 @@ public class EnemyEditor : Editor
     SerializedProperty hitImpactProp;
     SerializedProperty startStunTimeProp;
     SerializedProperty stunEffectProp;
+    SerializedProperty deathSfxProp;
+    SerializedProperty stunSfxProp;
+    SerializedProperty hurtSfxProp;
     float labelWidth = 150f;
 
     void OnEnable()
@@ -23,6 +26,9 @@ public class EnemyEditor : Editor
         hitImpactProp = serializedObject.FindProperty("hitImpact");
         startStunTimeProp = serializedObject.FindProperty("startStunTime");
         stunEffectProp = serializedObject.FindProperty("stunEffect");
+        deathSfxProp = serializedObject.FindProperty("deathSfxIndex");
+        stunSfxProp = serializedObject.FindProperty("stunSfxIndex");
+        hurtSfxProp = serializedObject.FindProperty("hurtSfxIndex");
     }
     public override void OnInspectorGUI()
     {
@@ -49,6 +55,14 @@ public class EnemyEditor : Editor
         EditorGUILayout.PropertyField(startStunTimeProp);
         EditorGUILayout.PropertyField(stunEffectProp, new GUIContent("Effect Stunned"));
         // Apply changes to the serializedProperty - always do this in the end of OnInspectorGUI.
+        EditorGUILayout.Space();
+         
+        EditorGUILayout.PropertyField(deathSfxProp);
+        EditorGUILayout.Space();
+        EditorGUILayout.PropertyField(hurtSfxProp);
+        EditorGUILayout.Space();
+        EditorGUILayout.PropertyField(stunSfxProp);
+
         serializedObject.ApplyModifiedProperties();
     }
 

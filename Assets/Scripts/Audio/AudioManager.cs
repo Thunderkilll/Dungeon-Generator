@@ -15,6 +15,9 @@ public class AudioManager : MonoBehaviour
     public AudioSource gameOverMusic;
     [Tooltip("Source that handles Winning music")]
     public AudioSource winMusic;
+
+    [Tooltip("list of all sound effects in the level")]
+    public AudioSource[] sfx;
     #endregion
 
     #region singleton
@@ -66,10 +69,18 @@ public class AudioManager : MonoBehaviour
         levelMusic.Stop();
         winMusic.Play();
     }
-
+    /// <summary>
+    /// Play the normal background music of this level
+    /// </summary>
     public void PlayLevelMusic()
     {
         levelMusic.Play();
+    }
+
+    public void PlaySFX(int index)
+    {
+        sfx[index].Stop();
+        sfx[index].Play();
     }
 
 }

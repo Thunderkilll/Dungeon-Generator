@@ -19,6 +19,7 @@ public class Breakables : MonoBehaviour
     [Range(0,100)]
     private float itemDropPercentage;
 
+    public int sfxIndex;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -31,7 +32,13 @@ public class Breakables : MonoBehaviour
                 int rotation = UnityEngine.Random.Range(0, 4);
                 Instantiate(objectpieces[i], transform.position, Quaternion.Euler(0, 0, rotation * 90f));
             }
-           
+
+            #endregion
+
+            #region SFX
+
+            AudioManager.instance.PlaySFX(sfxIndex);
+
             #endregion
             if (shouldDropItems)
             {

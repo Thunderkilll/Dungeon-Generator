@@ -24,7 +24,7 @@ public class EnemyBullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {    
-        Debug.Log(other.name);
+         
         if (other.tag == "Player")
         {
             //do effect and damage here

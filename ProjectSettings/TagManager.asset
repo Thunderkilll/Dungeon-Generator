@@ -9,6 +9,7 @@ TagManager:
   - DestroyWithLevelChange
   - Enemy
   - Wall
+  - Coin
   layers:
   - Default
   - TransparentFX

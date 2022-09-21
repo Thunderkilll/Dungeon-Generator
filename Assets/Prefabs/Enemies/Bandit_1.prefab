@@ -99,7 +99,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1969581473
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: 7523968652184068321, guid: 9197453e973dd05409fbcc2f2c93981d,
     type: 3}
@@ -215,7 +215,6 @@ MonoBehaviour:
   moveSpeed: 2
   rangeChase: 5
   respawnDelay: 0
-  isDead: 0
   rb: {fileID: 2982872379122647612}
   anim: {fileID: 239957326304012400}
   sp: {fileID: 8555296783695442815}
@@ -264,6 +263,9 @@ MonoBehaviour:
     type: 3}
   startStunTime: 5
   stunEffect: {fileID: 8617981882354137286}
+  deathSfxIndex: 2
+  stunSfxIndex: 0
+  hurtSfxIndex: 0
 --- !u!114 &8416976684187671637
 MonoBehaviour:
   m_ObjectHideFlags: 0

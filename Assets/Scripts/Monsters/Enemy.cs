@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+ 
     [Header("Enemy Health")]
     public float health = 150;
     public float maxHealth; //(at the start 100%)
@@ -16,6 +17,9 @@ public class Enemy : MonoBehaviour
     public float startStunTime;
 
     public GameObject stunEffect;
+    public int deathSfxIndex;
+    public int stunSfxIndex;
+    public int hurtSfxIndex;
 
     #region local props
     float stunTime;
@@ -23,8 +27,8 @@ public class Enemy : MonoBehaviour
     float maxSpeed;
     float moveSpeed;
     #endregion
-  
-   
+
+ 
     // Update is called once per frame
     void Start()
     {
@@ -44,6 +48,7 @@ public class Enemy : MonoBehaviour
         {
             moveSpeed = 0;
             GetComponent<EnemyController>().SetMoveSpeed(moveSpeed);
+            
             stunTime -= Time.deltaTime;
         }
     }
@@ -55,15 +60,19 @@ public class Enemy : MonoBehaviour
         //Debug.Log("enemy took damage");
         Instantiate(hitImpact, transform.position, transform.rotation);
         maxHealth = (int)(health * 100) / max;
-        if (health <= 0)
-        {
-            Debug.Log("Enemy dead , display destroyed animation here");
-            Destroy(gameObject);
-            int selectedSplat = Random.Range(0, deathSplatter.Length);
-            int rotation = Random.Range(0, 4);
-            //Instantiate(deathSplatter[selectedSplat], transform.position, transform.rotation);
-            Instantiate(deathSplatter[selectedSplat], transform.position, Quaternion.Euler(0, 0, rotation * 90f));
-        }
+        AudioManager.instance.PlaySFX(hurtSfxIndex);
+    }
+
+    public void OnEnemyDeath()
+    {
+        AudioManager.instance.PlaySFX(deathSfxIndex);
+        Debug.Log("Enemy dead , display destroyed animation here");
+        Destroy(gameObject);
+        int selectedSplat = Random.Range(0, deathSplatter.Length);
+        int rotation = Random.Range(0, 4);
+        
+        Instantiate(deathSplatter[selectedSplat], transform.position, Quaternion.Euler(0, 0, rotation * 90f));
+        
     }
 
     private void ActivateStunEffect()
@@ -74,11 +83,17 @@ public class Enemy : MonoBehaviour
 
     private void DeactivateStunnEffect()
     {
+        AudioManager.instance.PlaySFX(stunSfxIndex);
         stunEffect.SetActive(false);
     }
 
     private void Update()
     {
         EnemyStunned();
+    }
+
+    public float Health()
+    {
+        return health;
     }
 }

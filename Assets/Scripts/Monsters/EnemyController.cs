@@ -26,6 +26,7 @@ public class EnemyController : MonoBehaviour
 
     private Vector3 moveDirection;
 
+    private Enemy enemyScript;
     public EnemyFireMechanic enemyFireMechanic;
     [Header("Enemy attack settings")]
 
@@ -38,7 +39,7 @@ public class EnemyController : MonoBehaviour
 
     private void Awake()
     {
- 
+        enemyScript = GetComponent<Enemy>();
         if (enemyFireMechanic == null)
         {
             enemyFireMechanic = GetComponent<EnemyFireMechanic>();
@@ -47,19 +48,33 @@ public class EnemyController : MonoBehaviour
 
     void Update()
     {
+        EnemyBehaviourManagement();
+        EnemyHealth();
+    }
+
+    void EnemyHealth()
+    {
+        float health = enemyScript.Health();
+        if (health <= 0 && !isDead)
+        {
+            isDead = true;
+            enemyScript.OnEnemyDeath();
+        }
+    }
+
+    private void EnemyBehaviourManagement()
+    {
         if (!isDead)
         {
             if (sp.isVisible && PlayerController.instance.gameObject.activeInHierarchy)
             {
                 EnemyMoveDirection();
                 EnemyMoveAnimation();
-                enemyFireMechanic.EnemyFireAtPlayer(); 
+                enemyFireMechanic.EnemyFireAtPlayer();
             }
 
         }
-   
     }
-
 
 
     private void EnemyMoveDirection()
