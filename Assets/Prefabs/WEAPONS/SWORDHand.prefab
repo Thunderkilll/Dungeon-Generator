@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3009075409982352463
 Transform:
   m_ObjectHideFlags: 0
@@ -70,8 +70,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 739918523
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 25b86b9b197647e4f83f8b6db18963b2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -96,7 +96,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14a5b92c2d7d488428768407792040ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startTimeBtwAttacks: 0.3
+  startTimeBtwAttacks: 0.2
   attackPos: {fileID: 3009075410801191483}
   attackRangeX: 0.82
   attackRangeY: 0.47
