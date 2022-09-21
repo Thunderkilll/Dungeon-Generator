@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3449727f006d6844963297227d3cc13, type: 3}
+  m_Name: highHealing
+  m_EditorClassIdentifier: 
+  itemName: High Healing Magic Potion
+  itemDescription: 'This is a high Healing Potion from old ages made by magic users
+    that call themselves doctors.
+
+    This potion is a treasure and can fetch a
+    good price however it''s the kind of potion that can save your life.'
+  sellPrice: 500
+  buyPrice: 950
+  type: 1

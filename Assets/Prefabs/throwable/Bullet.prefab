@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3812204003972652659}
   - component: {fileID: 3812204003972652658}
   - component: {fileID: 3812204003972652661}
-  m_Layer: 12
+  m_Layer: 9
   m_Name: Bullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71,10 +71,11 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1788398921
+  m_SortingLayer: 7
   m_SortingOrder: 0
-  m_Sprite: {fileID: -3328242913338228825, guid: 56faa61c0738e9b43b0b5aa082c87bb1, type: 3}
+  m_Sprite: {fileID: -3328242913338228825, guid: 56faa61c0738e9b43b0b5aa082c87bb1,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -99,7 +100,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 7.5
   damage: 25
-  bulletEffect: {fileID: 5527752693937029320, guid: b220d545527821a4ebc226fe5c47c342, type: 3}
+  bulletEffect: {fileID: 5527752693937029320, guid: b220d545527821a4ebc226fe5c47c342,
+    type: 3}
   rb: {fileID: 3812204003972652661}
 --- !u!61 &3812204003972652658
 BoxCollider2D:

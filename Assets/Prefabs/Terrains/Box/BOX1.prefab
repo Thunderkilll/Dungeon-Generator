@@ -70,10 +70,11 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1317974247
-  m_SortingLayer: -1
+  m_SortingLayerID: -391121977
+  m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: 2197855871317943228, guid: 79acc13a3a8f41e46a4b1aae731866bb, type: 3}
+  m_Sprite: {fileID: 2197855871317943228, guid: 79acc13a3a8f41e46a4b1aae731866bb,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -127,3 +128,8 @@ MonoBehaviour:
   - {fileID: 251411731029170912, guid: e20b941cffd17f04ab61416e9a627253, type: 3}
   - {fileID: 2765840133593447996, guid: 1f7f232eebec9e04eab29a319fa34137, type: 3}
   - {fileID: 4890524069567171420, guid: b1c14fec5f6c5f84ab1ca8bf607e0549, type: 3}
+  shouldDropItems: 1
+  itemsToDrop:
+  - {fileID: 6142825920348060261, guid: ae8d0e8925654f943a86837495bb2aaf, type: 3}
+  - {fileID: 5781453979696089308, guid: c4a5fc1f364f43c43b0854ee57f05181, type: 3}
+  itemDropPercentage: 30

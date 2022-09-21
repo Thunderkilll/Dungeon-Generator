@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3638869218334602658}
   - component: {fileID: 2631774388001313380}
   - component: {fileID: 8762726655029468419}
-  m_Layer: 12
+  m_Layer: 9
   m_Name: Bullets_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71,10 +71,11 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1788398921
+  m_SortingLayer: 7
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2363109045813806874, guid: 56faa61c0738e9b43b0b5aa082c87bb1, type: 3}
+  m_Sprite: {fileID: -2363109045813806874, guid: 56faa61c0738e9b43b0b5aa082c87bb1,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -99,7 +100,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 7.5
   damage: 30
-  bulletEffect: {fileID: 5527752693937029320, guid: b220d545527821a4ebc226fe5c47c342, type: 3}
+  bulletEffect: {fileID: 5527752693937029320, guid: b220d545527821a4ebc226fe5c47c342,
+    type: 3}
   rb: {fileID: 2631774388001313380}
 --- !u!50 &2631774388001313380
 Rigidbody2D:

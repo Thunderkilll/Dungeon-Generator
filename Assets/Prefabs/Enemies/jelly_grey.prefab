@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5295686828895800425}
   - component: {fileID: 5295686828895800424}
   - component: {fileID: 5295686828895800430}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: jelly_grey
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -70,9 +70,10 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1116961063
-  m_SortingLayer: 1
+  m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -8312717508850296262, guid: a08275f8557815a4eb3021ae015f648c, type: 3}
+  m_Sprite: {fileID: -8312717508850296262, guid: a08275f8557815a4eb3021ae015f648c,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

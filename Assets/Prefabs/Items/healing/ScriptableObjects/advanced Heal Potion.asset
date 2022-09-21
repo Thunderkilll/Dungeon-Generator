@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3449727f006d6844963297227d3cc13, type: 3}
+  m_Name: advanced Heal Potion
+  m_EditorClassIdentifier: 
+  itemName: 'Adavanced Heal Potion
+
+'
+  itemDescription: 'This potion is very rare to obtain . This unique item was created
+    by old ages  magic users called scientists . This potion heals your wounds '
+  sellPrice: 150
+  buyPrice: 200
+  type: 1

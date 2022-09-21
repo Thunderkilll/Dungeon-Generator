@@ -71,10 +71,11 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1317974247
-  m_SortingLayer: -1
+  m_SortingLayerID: -391121977
+  m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: -3727842135710763035, guid: 79acc13a3a8f41e46a4b1aae731866bb, type: 3}
+  m_Sprite: {fileID: -3727842135710763035, guid: 79acc13a3a8f41e46a4b1aae731866bb,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -101,6 +102,10 @@ MonoBehaviour:
   - {fileID: 1794825342072141600, guid: 35ed6e7e9ed5a8c46a6d265c10dd5d65, type: 3}
   - {fileID: 6504776009004856653, guid: bb65d84c8f094534b8f2f702830d4764, type: 3}
   - {fileID: 6828054080071801310, guid: 7cc8136aa7a316446a082622b8b3e65c, type: 3}
+  shouldDropItems: 1
+  itemsToDrop:
+  - {fileID: 4192535811303649949, guid: 2d9ff922b15993940b9593bac1b9a94b, type: 3}
+  itemDropPercentage: 100
 --- !u!61 &443051276
 BoxCollider2D:
   m_ObjectHideFlags: 0

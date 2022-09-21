@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 853367115802043466}
   - component: {fileID: 853367115802043465}
   - component: {fileID: 6843761691267994921}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: red_rat
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -70,9 +70,10 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1116961063
-  m_SortingLayer: 1
+  m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -6632379501416401536, guid: 9197453e973dd05409fbcc2f2c93981d, type: 3}
+  m_Sprite: {fileID: -6632379501416401536, guid: 9197453e973dd05409fbcc2f2c93981d,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 820150316}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: firePoint
   m_TagString: Untagged
   m_Icon: {fileID: 2800000, guid: c98f350e47082844fa2954de4d2d5ff9, type: 3}
@@ -98,10 +98,11 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1116961063
-  m_SortingLayer: 1
+  m_SortingLayerID: -1969581473
+  m_SortingLayer: 5
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7523968652184068321, guid: 9197453e973dd05409fbcc2f2c93981d, type: 3}
+  m_Sprite: {fileID: 7523968652184068321, guid: 9197453e973dd05409fbcc2f2c93981d,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -259,7 +260,8 @@ MonoBehaviour:
   - {fileID: 448048691431045085, guid: 8c50df6d734109a478d4ee4c4251f309, type: 3}
   - {fileID: 8619399776220349710, guid: 19b2bf6b996154b478bafc312e88e7b7, type: 3}
   - {fileID: 8311843533929262303, guid: cc1df3783ddced148aaccf0ceb5c05f5, type: 3}
-  hitImpact: {fileID: 768525563193336962, guid: 453e2b51ac1a9554caa45f88108ef5af, type: 3}
+  hitImpact: {fileID: 768525563193336962, guid: 453e2b51ac1a9554caa45f88108ef5af,
+    type: 3}
   startStunTime: 5
   stunEffect: {fileID: 8617981882354137286}
 --- !u!114 &8416976684187671637
@@ -274,7 +276,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3f736929b0b39f4c8c035da323f51f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 8596625212222501604, guid: 72c8a4666f0748d4b9d6c3ed56adae84, type: 3}
+  bulletPrefab: {fileID: 8596625212222501604, guid: 72c8a4666f0748d4b9d6c3ed56adae84,
+    type: 3}
   firePoint: {fileID: 820150316}
   canFire: 1
   fireRate: 4
@@ -289,7 +292,7 @@ GameObject:
   m_Component:
   - component: {fileID: 779514528231180059}
   - component: {fileID: 5535752487042535089}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: shadow_player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -350,7 +353,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 6440628458277568191, guid: a47294d8f066c634d90ee371916313ff, type: 3}
+  m_Sprite: {fileID: 6440628458277568191, guid: a47294d8f066c634d90ee371916313ff,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -372,7 +376,7 @@ GameObject:
   - component: {fileID: 3613201521841391847}
   - component: {fileID: 5017098543567449777}
   - component: {fileID: 4258541780618350683}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: shrapburst
   m_TagString: Untagged
   m_Icon: {fileID: 0}

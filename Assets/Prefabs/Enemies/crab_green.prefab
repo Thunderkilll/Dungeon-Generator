@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8532979551021643062}
   - component: {fileID: 8532979551021643063}
   - component: {fileID: 8532979551021643057}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: crab_green
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -70,9 +70,10 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1116961063
-  m_SortingLayer: 1
+  m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1587185640471993149, guid: f0165b28970311843a1e0642aa3fd7a7, type: 3}
+  m_Sprite: {fileID: -1587185640471993149, guid: f0165b28970311843a1e0642aa3fd7a7,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

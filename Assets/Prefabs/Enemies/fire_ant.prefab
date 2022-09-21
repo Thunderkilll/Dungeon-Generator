@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2598446146684106839}
   - component: {fileID: 2598446146684106832}
   - component: {fileID: 2598446146684106838}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: fire_ant
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -70,9 +70,10 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1116961063
-  m_SortingLayer: 1
+  m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -3508691734355319006, guid: bc96a2471d1530d4abf589b6b51cbaa4, type: 3}
+  m_Sprite: {fileID: -3508691734355319006, guid: bc96a2471d1530d4abf589b6b51cbaa4,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
