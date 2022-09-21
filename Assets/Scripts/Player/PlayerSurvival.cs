@@ -173,6 +173,7 @@ public class PlayerSurvival : MonoBehaviour
             //player dies
                 PlayerController.instance.gameObject.SetActive(false);
                 UIController.instance.deathUI.SetActive(true);
+                AudioManager.instance.PlayGameOverMusic();
 
             } 
  

@@ -12,7 +12,8 @@ public class EnemyController : MonoBehaviour
     private float rangeChase;
     [SerializeField]
     private float respawnDelay;
-    [SerializeField]
+    //[SerializeField]
+    [HideInInspector]
     private bool isDead =false;
 
     [SerializeField]

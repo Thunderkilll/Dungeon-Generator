@@ -41,7 +41,7 @@ public class AudioManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+       PlayLevelMusic();
     }
 
     // Update is called once per frame
@@ -65,6 +65,11 @@ public class AudioManager : MonoBehaviour
     {
         levelMusic.Stop();
         winMusic.Play();
+    }
+
+    public void PlayLevelMusic()
+    {
+        levelMusic.Play();
     }
 
 }
