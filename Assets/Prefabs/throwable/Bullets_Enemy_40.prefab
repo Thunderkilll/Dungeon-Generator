@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8596625212222501600}
   - component: {fileID: 693425385938578739}
   m_Layer: 10
-  m_Name: Bullets_Enemy
+  m_Name: Bullets_Enemy_40
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -97,9 +97,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: {x: 0, y: 0, z: 0}
-  speed: 4
+  speed: 10
   hasEffect: 0
-  damageAmount: 10
+  damageAmount: 50
 --- !u!61 &693425385938578739
 BoxCollider2D:
   m_ObjectHideFlags: 0

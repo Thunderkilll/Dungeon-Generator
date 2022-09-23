@@ -10,9 +10,11 @@ public class HealingPotion : MonoBehaviour
     float healAmount = 1f;
 
     public float waitToBeCollected = .5f;
-
+    [Header("Sound effects")]
+    public int healthPickUp = 9;
     [Header("Item properties")] 
     public Item item;
+
     #endregion
    
 
@@ -33,7 +35,10 @@ public class HealingPotion : MonoBehaviour
                 {
                     PlayerSurvival.instance.SetHealth(heal);
                 }
-                Debug.Log("you are drinking a potion amount <color=green>"+healAmount+"</color>");
+                //sfx
+                AudioManager.instance.PlaySFX(healthPickUp);
+                
+                    Debug.Log("you are drinking a potion amount <color=green>"+healAmount+"</color>");
                 Destroy(gameObject);
             }
             else

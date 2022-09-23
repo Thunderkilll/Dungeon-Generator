@@ -36,12 +36,16 @@ public class PlayerDash : MonoBehaviour
         {
             if (dashCooldownCounter <= 0 && dashCounter <=0)
             {
-                
+               
+                //animation
                 anim.SetTrigger("isDashing");
                 currSpeed = PlayerController.instance.GetMoveSpeed(); // get player normal speed
                 //  PlayerController.instance.MovementSpeed(dashCounter);
                 PlayerController.instance.ChangeSpeed(dashSpeed); //change speed to dash speed
                 PlayerSurvival.instance.SetInvincibilityCounter(dashInvincibility);
+                //sfx
+                AudioManager.instance.PlaySFX(10);
+
                 dashCounter = dashLength;
               
             }

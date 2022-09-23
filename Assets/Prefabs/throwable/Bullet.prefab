@@ -103,6 +103,7 @@ MonoBehaviour:
   bulletEffect: {fileID: 5527752693937029320, guid: b220d545527821a4ebc226fe5c47c342,
     type: 3}
   rb: {fileID: 3812204003972652661}
+  indexSFX: 35
 --- !u!61 &3812204003972652658
 BoxCollider2D:
   m_ObjectHideFlags: 0

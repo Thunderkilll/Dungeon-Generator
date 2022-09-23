@@ -18,8 +18,12 @@ public class FireMechanic : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
+           
             //fire projectile 
             GameObject go = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+            int index = bulletPrefab.GetComponent<PlayerBullet>().indexSFX;
+            //sfx
+            AudioManager.instance.PlaySFX(index);
             go.name = bulletPrefab.name;
             fireCounter = timeBetweenShots;
         }

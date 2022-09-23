@@ -22,6 +22,7 @@ public class CoinItem : MonoBehaviour
     {
         if (col.tag == "Player")
         {
+            //sound fx
             AudioManager.instance.PlaySFX(sfxCoinPickUp);
             Destroy(gameObject);
 

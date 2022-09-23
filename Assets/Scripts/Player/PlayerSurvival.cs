@@ -60,8 +60,8 @@ public class PlayerSurvival : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       // HungerMeterCalculations();
-       // ThirstMeterCalculations();
+        // HungerMeterCalculations();
+        // ThirstMeterCalculations();
         StaminaMeterCalculations();
         CheckPlayerHealth();
         InvincibilityWhenHit();
@@ -75,7 +75,7 @@ public class PlayerSurvival : MonoBehaviour
         if (invincCounter > 0)
         {
             invincCounter -= Time.deltaTime;
-            if (invincCounter <=0)
+            if (invincCounter <= 0)
             {
                 PlayerController.instance.ChangeAlphaSprite(1f);
             }
@@ -104,13 +104,13 @@ public class PlayerSurvival : MonoBehaviour
             {
                 stamina += staminaFactor * Time.deltaTime;
                 PlayerController.instance.ChangeSpeed(currpeed);
-            } 
+            }
         }
         if (stamina >= maxStamina)
         {
-             
+
             PlayerController.instance.ChangeSpeed(currpeed);
-           
+
         }
     }
 
@@ -127,7 +127,7 @@ public class PlayerSurvival : MonoBehaviour
             health -= hungerDamage * Time.deltaTime; //take damage when hungry
             //Debug.Log("you are hungry , you'll die from hunger find food source now");
         }
-        
+
     }
     private void ThirstMeterCalculations()
     {
@@ -135,7 +135,7 @@ public class PlayerSurvival : MonoBehaviour
         {
             thirst += thirstFactor * Time.deltaTime;
             //Debug.Log("thirst factor : <color=blue>" + thirst+"</color>");
-           
+
         }
         if (thirst >= maxThirst && health > 0)
         {
@@ -143,16 +143,46 @@ public class PlayerSurvival : MonoBehaviour
             health -= thirstDamage * Time.deltaTime; //take damage when hungry
             //Debug.Log("you are thirsty , you'll die from hydration find a water source now");
         }
-      
+
 
     }
 
     public void TakeDamage(float value)
     {
-   //if we take a hit we got invincible for some time
+        //if we take a hit we got invincible for some time
         if (invincCounter <= 0)
         {
-            health -= value; 
+            
+           
+            if (value <= 5)
+            {
+                //sfx LIGHT HIT
+                AudioManager.instance.PlaySFX(30);
+                //sfx Heavy Hit
+                AudioManager.instance.PlaySFX(33);
+            }
+            else if (value <= 10 && value > 5)
+            {
+                //sfx Heavy Hit
+                AudioManager.instance.PlaySFX(31);
+                //sfx Heavy Hit
+                AudioManager.instance.PlaySFX(34);
+            }
+            else if (value <= 20 && value > 10)
+            {
+                //sfx Heavy Hit
+                AudioManager.instance.PlaySFX(32);
+                //sfx Heavy Hit
+                AudioManager.instance.PlaySFX(33);
+            }
+            else  
+            {
+               
+                //sfx Heavy Hit
+                AudioManager.instance.PlaySFX(34);
+            } 
+            
+            health -= value;
             invincCounter = damageInvincLength;
             PlayerController.instance.ChangeAlphaSprite(.5f);
             #region blood
@@ -162,24 +192,27 @@ public class PlayerSurvival : MonoBehaviour
             Instantiate(deathSplatter[selectedSplat], PlayerController.instance.transform.position, Quaternion.Euler(0, 0, rotation * 90f));
             #endregion
 
-        } 
+        }
     }
 
     public void CheckPlayerHealth()
     {
-            
-            if (health <= 0 && !isDead)
-            {
-                isDead = true;
+
+        if (health <= 0 && !isDead)
+        {
+            //sfx
+            AudioManager.instance.PlaySFX(11);
+            isDead = true;
             //player dies
-                AudioManager.instance.PlayGameOverMusic();
-                PlayerController.instance.gameObject.SetActive(false);
-                UIController.instance.deathUI.SetActive(true);
-                
-               
-            } 
- 
-     
+            AudioManager.instance.PlayGameOverMusic();
+
+            PlayerController.instance.gameObject.SetActive(false);
+            UIController.instance.deathUI.SetActive(true);
+
+
+        }
+
+
     }
 
     #region getters
@@ -202,7 +235,7 @@ public class PlayerSurvival : MonoBehaviour
     }
     public void SetHealth(float value)
     {
-        health  = value;
+        health = value;
     }
     #endregion
 

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerBullet : MonoBehaviour
 {
-     
+    [Header("Bullet Settings")]
     [SerializeField]
     float speed = 7.5f;
     [SerializeField]
@@ -14,7 +14,8 @@ public class PlayerBullet : MonoBehaviour
     [SerializeField]
     Rigidbody2D rb;
 
-   
+    [Header("Animation Settings")] public int indexSFX;
+
 
     // Update is called once per frame
     void Update()

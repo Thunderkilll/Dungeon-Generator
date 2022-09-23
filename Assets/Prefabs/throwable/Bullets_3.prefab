@@ -102,6 +102,7 @@ MonoBehaviour:
   bulletEffect: {fileID: 5527752693937029320, guid: b220d545527821a4ebc226fe5c47c342,
     type: 3}
   rb: {fileID: 5089829462753599136}
+  indexSFX: 38
 --- !u!50 &5089829462753599136
 Rigidbody2D:
   serializedVersion: 4
