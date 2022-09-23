@@ -19,6 +19,8 @@ public class EnemyFireMechanic : MonoBehaviour
     float fireRange;
 
     float fireCounter;
+    [Header("Sound effects")]
+    public int index = 13;
     #endregion
    
     public void EnemyFireAtPlayer()
@@ -27,9 +29,12 @@ public class EnemyFireMechanic : MonoBehaviour
         {
             if (Vector3.Distance(transform.position, PlayerController.instance.transform.position) <= fireRange)
             {
+
                 fireCounter -= Time.deltaTime;
                 if (fireCounter <= 0)
                 {
+                    
+                    AudioManager.instance.PlaySFX(index);
                     fireCounter = fireRate;
                     Instantiate(bulletPrefab, firePoint.position, transform.rotation);
                 }
