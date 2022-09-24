@@ -131,4 +131,9 @@ public class AudioManager : MonoBehaviour
         playerAudioBreath.Stop();
         playerAudioBreath.Play();
     }
+
+    public void PlayTrack(int index)
+    {
+         
+    }
 }
