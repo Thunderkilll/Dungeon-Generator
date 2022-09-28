@@ -54,12 +54,24 @@ public class PlayerSurvival : MonoBehaviour
     {
         health = maxHealth; //if we are starting game first time; I should save this value to an internal db
         stamina = maxStamina;
-        currpeed = PlayerController.instance.GetMoveSpeed();
+        if (PlayerController.instance != null)
+        {
+            currpeed = PlayerController.instance.GetMoveSpeed();
+        }
+        else
+        {
+            currpeed = 10f;
+        }
+       
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (PlayerController.instance != null)
+        {
+            currpeed = PlayerController.instance.GetMoveSpeed();
+        }
         // HungerMeterCalculations();
         // ThirstMeterCalculations();
         StaminaMeterCalculations();

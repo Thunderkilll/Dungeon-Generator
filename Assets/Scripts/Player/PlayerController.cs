@@ -52,11 +52,27 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         currentSpeed = moveSpeed;
+        if (anim == null)
+        {
+            anim = transform.GetComponent<Animator>();
+        }
+        if (rb == null)
+        {
+            rb = GetComponent<Rigidbody2D>();
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (anim == null)
+        {
+            anim = transform.GetComponent<Animator>();
+        }
+        if (rb == null)
+        {
+            rb = GetComponent<Rigidbody2D>();
+        }
         MoveInputs();
 
         MoveAnimation();
@@ -69,6 +85,7 @@ public class PlayerController : MonoBehaviour
     {
         if (moveInput != Vector2.zero)
         {
+            Debug.Log("Move");
             anim.SetBool("isMoving", true);
         }
         else
@@ -84,6 +101,7 @@ public class PlayerController : MonoBehaviour
     private void MoveInputs()
     {
         moveInput.x = Input.GetAxisRaw("Horizontal");
+         
         moveInput.y = Input.GetAxisRaw("Vertical");
         moveInput.Normalize();
 

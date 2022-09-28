@@ -9,9 +9,7 @@ public class AudioManager : MonoBehaviour
     #region Attributes
     [Header("General Settings")]
     public GameObject player;
-    [Header("SFX and Audio in the game")]
-    [Tooltip("Source that handles background music of the level")]
-    public AudioSource levelMusic;
+  
     [Tooltip("Source that handles Game Over music")]
     public AudioSource gameOverMusic;
     [Tooltip("Source that handles Winning music")]
@@ -52,14 +50,20 @@ public class AudioManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (player == null)
+        {
+            player = GameObject.FindGameObjectWithTag("Player");
+        }
        PlayLevelMusic();
        PlayBreathing();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        if (player == null)
+        {
+            player = GameObject.FindGameObjectWithTag("Player");
+        }
     }
 
     /// <summary>
@@ -67,7 +71,7 @@ public class AudioManager : MonoBehaviour
     /// </summary>
     public void PlayGameOverMusic()
     {
-        levelMusic.Stop();
+        MusicManager.instance.StopMusic();
         gameOverMusic.Play();
     }
     /// <summary>
@@ -75,9 +79,10 @@ public class AudioManager : MonoBehaviour
     /// </summary>
     public void PlayWinMusic()
     {
+        MusicManager.instance.StopMusic();
         winMusic.Stop();
         gameOverMusic.Stop();
-        levelMusic.Stop();
+        
         foreach (var item in sfx)
         {
             item.Stop();
@@ -89,8 +94,9 @@ public class AudioManager : MonoBehaviour
     /// </summary>
     public void PlayLevelMusic()
     {
-        levelMusic.Stop();
-        levelMusic.Play();
+
+        MusicManager.instance.StartMusic();
+
     }
     /// <summary>
     /// Play the sound effect from the sfx list by indicating the index of the track we want to play
@@ -102,7 +108,12 @@ public class AudioManager : MonoBehaviour
         sfx[index].Play();
     }
 
-
+    public void StopAllMusic()
+    {
+        MusicManager.instance.StopMusic();
+        gameOverMusic.Stop();
+        winMusic.Stop();
+    }
     public void PlayBreathing()
     {
         AudioSource playerAudioBreath = player.GetComponent<AudioSource>();
@@ -132,8 +143,8 @@ public class AudioManager : MonoBehaviour
         playerAudioBreath.Play();
     }
 
-    public void PlayTrack(int index)
-    {
+    //public void PlayTrack(int index)
+    //{
          
-    }
+    //}
 }

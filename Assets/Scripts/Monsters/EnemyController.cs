@@ -68,6 +68,7 @@ public class EnemyController : MonoBehaviour
         {
             if (sp.isVisible && PlayerController.instance.gameObject.activeInHierarchy)
             {
+                GameStateManager.Instance.SetGameState(2.0f);
                 EnemyMoveDirection();
                 EnemyMoveAnimation();
                 enemyFireMechanic.EnemyFireAtPlayer();

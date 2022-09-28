@@ -34,6 +34,7 @@ public class GameStateManager : MonoBehaviour
     void Start()
     {
         currentState = GameState.Explore;
+        SetGameState(0);
     }
 
     /// <summary>
